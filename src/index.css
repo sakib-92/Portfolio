@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050307;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+}
+
+/* Cinematic Ambient Studio Lighting Gradients */
+.cinematic-bg {
+  background: 
+    radial-gradient(ellipse 70% 60% at 15% 15%, rgba(168, 85, 247, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 55% at 85% 25%, rgba(217, 70, 239, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(147, 51, 234, 0.14) 0%, transparent 50%),
+    #050307;
+}
+
+/* Subtle Film Grain Noise Texture Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism Styles */
+.glass-pill {
+  background: rgba(12, 7, 20, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(12, 7, 20, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(18, 10, 30, 0.85);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.28);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050307;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}
+
+/* 3D Perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Glow Accent Text */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 30%, #A855F7 65%, #D946EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #7E22CE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
