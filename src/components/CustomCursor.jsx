@@ -58,9 +58,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Small Core Dot */}
+      {/* Small Core Dot - Sleek Charcoal */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-[#A855F7] rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_12px_#A855F7]"
+        className="fixed top-0 left-0 w-2 h-2 bg-slate-900 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 shadow-sm"
         style={{
           x: mouseX,
           y: mouseY,
@@ -69,21 +69,22 @@ export default function CustomCursor() {
 
       {/* Trailing Outer Ring / Badge */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center border border-[#A855F7]/60 bg-[#A855F7]/10 backdrop-blur-[2px] transition-colors duration-200"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center border border-slate-700/40 bg-slate-900/5 backdrop-blur-[2px] transition-colors duration-200"
         style={{
           x: ringX,
           y: ringY,
-          width: isHovered ? (cursorText ? 90 : 50) : 34,
-          height: isHovered ? (cursorText ? 90 : 50) : 34,
-          borderRadius: cursorText ? '24px' : '50%',
+          width: isHovered ? (cursorText ? 84 : 46) : 30,
+          height: isHovered ? (cursorText ? 84 : 46) : 30,
+          borderRadius: cursorText ? '20px' : '50%',
         }}
         animate={{
-          scale: isHovered ? 1.25 : 1,
-          borderColor: isHovered ? 'rgba(168, 85, 247, 0.9)' : 'rgba(168, 85, 247, 0.4)',
+          scale: isHovered ? 1.2 : 1,
+          borderColor: isHovered ? 'rgba(15, 23, 42, 0.7)' : 'rgba(100, 116, 139, 0.3)',
+          backgroundColor: isHovered ? (cursorText ? 'rgba(15, 23, 42, 0.95)' : 'rgba(15, 23, 42, 0.08)') : 'rgba(15, 23, 42, 0.03)'
         }}
       >
         {cursorText && (
-          <span className="text-[10px] font-mono tracking-wider font-bold text-[#C084FC] uppercase px-2 text-center animate-fade-in">
+          <span className="text-[10px] font-mono tracking-wider font-bold text-white uppercase px-2 text-center animate-fade-in">
             {cursorText}
           </span>
         )}

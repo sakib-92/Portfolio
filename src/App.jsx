@@ -11,9 +11,9 @@ import ContactFooter from './components/ContactFooter'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0A090D] text-gray-100 selection:bg-[#FF5A1F] selection:text-white relative">
-      {/* Subtle Grain Overlay */}
-      <div className="grain-overlay" />
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 selection:bg-slate-900 selection:text-white relative">
+      {/* Light Grid Pattern Texture Overlay */}
+      <div className="fixed inset-0 pointer-events-none light-grid-pattern opacity-60 z-0" />
 
       {/* Custom Mouse Cursor */}
       <CustomCursor />
@@ -21,8 +21,8 @@ export default function App() {
       {/* Fixed Glass Navbar */}
       <Navbar />
 
-      {/* Main Page Sections */}
-      <main>
+      {/* Main Page Content */}
+      <main className="relative z-10">
         <Hero />
         <About />
         <TechStack />

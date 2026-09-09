@@ -8,15 +8,15 @@ export default {
     extend: {
       colors: {
         brand: {
-          dark: "#050307",
-          card: "#0C0714",
-          border: "rgba(255, 255, 255, 0.08)",
-          violet: "#A855F7",
-          "violet-hover": "#C084FC",
-          purple: "#9333EA",
-          magenta: "#D946EF",
-          text: "#F3F4F6",
-          muted: "#9CA3AF"
+          slate: "#0F172A",
+          charcoal: "#1E293B",
+          card: "#FFFFFF",
+          surface: "#F8FAFC",
+          subtle: "#F1F5F9",
+          border: "#E2E8F0",
+          accent: "#2563EB",
+          text: "#0F172A",
+          muted: "#64748B"
         }
       },
       fontFamily: {
@@ -24,14 +24,10 @@ export default {
         display: ['"Space Grotesk"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace']
       },
-      backgroundImage: {
-        'glow-gradient': 'radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.18), transparent 70%)',
-        'hero-gradient': 'radial-gradient(ellipse at 20% 20%, rgba(168, 85, 247, 0.20) 0%, rgba(147, 51, 234, 0.15) 45%, rgba(5, 3, 7, 1) 80%)'
-      },
       boxShadow: {
-        'violet-glow': '0 0 25px -5px rgba(168, 85, 247, 0.45)',
-        'purple-glow': '0 0 25px -5px rgba(147, 51, 234, 0.45)',
-        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.6)'
+        'subtle-card': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
+        'premium-hover': '0 12px 28px -6px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04)',
+        'glass-light': '0 8px 32px 0 rgba(15, 23, 42, 0.06)'
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -40,7 +36,7 @@ export default {
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-8px)' },
         }
       }
     },
