@@ -118,7 +118,7 @@ export default function ContactFooter() {
             {/* Download Resume Block */}
             <div className="pt-2">
               <a
-                href="/Sakib_Sayyed_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Sakib_Sayyed_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-white p-4 rounded-2xl border border-slate-300 shadow-xs hover:border-slate-400 hover:shadow-md transition-all flex items-center justify-between group"

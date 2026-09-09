@@ -83,7 +83,7 @@ export default function Hero() {
                 <span>Explore Projects &amp; Live Demos</span>
               </a>
               <a
-                href="/Sakib_Sayyed_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Sakib_Sayyed_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-display font-semibold text-sm tracking-wide border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 flex items-center gap-2"
@@ -112,8 +112,14 @@ export default function Hero() {
               {/* Portrait Container with Elegant Studio Shading */}
               <div className="relative w-full aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl shadow-slate-500/25 border border-slate-200/80 ring-4 ring-slate-100/80 group">
                 <img
-                  src="/images/sakib-headshot.png"
+                  src={`${import.meta.env.BASE_URL}images/sakib-headshot.png`}
                   alt="Sakib Sayyed - AI/ML Engineer"
+                  onError={(e) => {
+                    if (!e.currentTarget.dataset.fallback) {
+                      e.currentTarget.dataset.fallback = 'true';
+                      e.currentTarget.src = './images/sakib-headshot.png';
+                    }
+                  }}
                   className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                 />
 
